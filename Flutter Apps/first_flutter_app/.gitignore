@@ -43,9 +43,5 @@ app.*.map.json
 /android/app/release
 
 
-# Ignore specific files
-simple_interest_view.dart
-area_of_circle_view.dart
-dashboard_view.dart
-arithmetic_view.dart
+
 
