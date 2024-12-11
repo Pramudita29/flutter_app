@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Calculator extends StatefulWidget {
   const Calculator({super.key});
 
@@ -19,7 +18,8 @@ class _CalculatorState extends State<Calculator> {
         try {
           // Evaluate the expression when "=" is pressed
           _output = _calculate(_input);
-          _input = _output; // Preserve the result as the input for next operations
+          _input =
+              _output; // Preserve the result as the input for next operations
         } catch (e) {
           _output = "Error";
         }
@@ -74,13 +74,28 @@ class _CalculatorState extends State<Calculator> {
           Expanded(
             child: GridView.count(
               crossAxisCount: 4, // 4 buttons per row
+              mainAxisSpacing: 8, // Spacing between rows
+              crossAxisSpacing: 8, // Spacing between columns
+              padding: const EdgeInsets.all(8), // Padding around the grid
               children: [
                 // Create the buttons for digits and operations
                 for (String button in [
-                  "7", "8", "9", "/",
-                  "4", "5", "6", "*",
-                  "1", "2", "3", "-",
-                  "C", "0", "=", "+",
+                  "7",
+                  "8",
+                  "9",
+                  "/",
+                  "4",
+                  "5",
+                  "6",
+                  "*",
+                  "1",
+                  "2",
+                  "3",
+                  "-",
+                  "C",
+                  "0",
+                  "=",
+                  "+",
                 ])
                   SizedBox(
                     child: ElevatedButton(
