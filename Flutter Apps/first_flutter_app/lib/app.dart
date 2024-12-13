@@ -4,7 +4,9 @@
 //import 'package:first_flutter_app/view/load_image_view.dart';
 //import 'package:first_flutter_app/view/card_view.dart';
 //import 'package:first_flutter_app/view/show_snack_bar_view.dart';
-import 'package:first_flutter_app/view/grid_view.dart';
+//import 'package:first_flutter_app/view/grid_view.dart';
+import 'package:first_flutter_app/view/stack_image_view.dart';
+import 'package:first_flutter_app/view/stack_view.dart';
 import 'package:flutter/material.dart';
 //import 'view/dashboard_view.dart'; // Import the Dashboard view
 
@@ -18,9 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'First Assignment',
-      home: Calculator() // Start with the Dashboard view
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'First Assignment',
+        home: StackImageView() // Start with the Dashboard view
+        );
   }
 }
