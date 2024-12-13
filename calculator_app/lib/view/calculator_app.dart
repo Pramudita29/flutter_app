@@ -112,7 +112,7 @@ class _CalculatorViewState extends State<CalculatorView> {
                 textDirection: TextDirection.rtl,
                 controller: _textController,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   filled: true,
                   fillColor: Colors.grey[200], // Input field color
                 ),
