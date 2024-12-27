@@ -11,7 +11,7 @@ class AreaOfCircleView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Area of Circle'),
+        title: const Text('Pramudita Area of Circle'),
         centerTitle: true,
       ),
       body: Padding(

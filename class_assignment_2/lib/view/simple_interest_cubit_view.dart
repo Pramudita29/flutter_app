@@ -13,7 +13,7 @@ class SimpleInterestView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Simple Interest'),
+        title: const Text('Pramudita Simple Interest'),
         centerTitle: true,
       ),
       body: Padding(
