@@ -1,17 +1,18 @@
-import 'package:class_assignment_2/cubit/area_of_circle_cubit.dart';
+import 'package:class_assignment_2/cubit/volume_of_cylinder_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AreaOfCircleView extends StatelessWidget {
-  const AreaOfCircleView({super.key});
+class VolumeOfCylinderView extends StatelessWidget {
+  const VolumeOfCylinderView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final radiusController = TextEditingController();
+    final heightController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pramudita Area of Circle'),
+        title: const Text('Pramudita Volume of Cylinder'),
         centerTitle: true,
       ),
       body: Padding(
@@ -27,19 +28,29 @@ class AreaOfCircleView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
+            TextField(
+              controller: heightController,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(
+                labelText: 'Height',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 final radius = double.tryParse(radiusController.text) ?? 0;
+                final height = double.tryParse(heightController.text) ?? 0;
 
-                context.read<AreaOfCircleCubit>().calculateArea(radius);
+                context.read<VolumeOfCylinderCubit>().calculateVolume(radius, height);
               },
-              child: const Text('Calculate'),
+              child: const Text('Calculate Volume'),
             ),
             const SizedBox(height: 16),
-            BlocBuilder<AreaOfCircleCubit, double>(
-              builder: (context, area) {
+            BlocBuilder<VolumeOfCylinderCubit, double>(
+              builder: (context, volume) {
                 return Text(
-                  'Area of Circle: $area',
+                  'Volume of Cylinder: $volume',
                   style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 );
               },

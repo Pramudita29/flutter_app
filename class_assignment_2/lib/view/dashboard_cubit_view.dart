@@ -10,7 +10,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dashboard'),
+        title: const Text('Pramudita Dashboard'),
         centerTitle: true,
       ),
       body: GridView(
@@ -24,13 +24,17 @@ class DashboardView extends StatelessWidget {
           Card(
             elevation: 4,
             child: InkWell(
-              onTap: () => context.read<DashboardCubit>().openSimpleInterestView(context),
+              onTap: () => context
+                  .read<DashboardCubit>()
+                  .openSimpleInterestView(context),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
                   Icon(Icons.add, size: 48, color: Colors.blue),
                   SizedBox(height: 8),
-                  Text('Simple Interest', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                  Text('Simple Interest',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
@@ -38,13 +42,16 @@ class DashboardView extends StatelessWidget {
           Card(
             elevation: 4,
             child: InkWell(
-              onTap: () => context.read<DashboardCubit>().openAreaOfCircleView(context),
+              onTap: () =>
+                  context.read<DashboardCubit>().openAreaOfCircleView(context),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
                   Icon(Icons.circle, size: 48, color: Colors.green),
                   SizedBox(height: 8),
-                  Text('Area of Circle', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                  Text('Area of Circle',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
@@ -52,13 +59,18 @@ class DashboardView extends StatelessWidget {
           Card(
             elevation: 4,
             child: InkWell(
-              onTap: () => context.read<DashboardCubit>().openWishUIView(context),
+              onTap: () => context
+                  .read<DashboardCubit>()
+                  .openVolumeOfCylinderView(context),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const <Widget>[
-                  Icon(Icons.dashboard_customize, size: 48, color: Colors.orange),
+                  Icon(Icons.dashboard_customize,
+                      size: 48, color: Colors.orange),
                   SizedBox(height: 8),
-                  Text('Wish UI', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                  Text('Volume of Cylinder',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
